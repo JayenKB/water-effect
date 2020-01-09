@@ -1,0 +1,32 @@
+<style>
+	body { margin: 0; }
+	div {
+		position: absolute;
+	}
+	.a {
+	left: 0;
+	top: 0;
+	right: 20%;
+	bottom: 20%;
+	background-size: cover;
+}
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<div class="a" style="background-image:url(http://placekitten.com/800/500)"></div>
+
+<script>
+	$(document).ready(function() {
+		try {
+			$('.a,.b,.c').ripples({
+				resolution: 256,
+				perturbance: 0.04
+			});
+		}
+		catch (e) {
+			$('.error').show().text(e);
+		}
+	});
+</script>
+<script src="http://www.jqueryscript.net/demo/jQuery-Plugin-For-Water-Ripple-Animation-ripples/js/jquery.ripples.js"></script> 
